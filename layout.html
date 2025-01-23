@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Grid Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Verdana', sans-serif;
+            background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+            color: #f4f4f9;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff6a00, #ee0979);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 3em;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-bottom: 5px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .grid-item {
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            border: none;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+            overflow: hidden;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(145deg, #ffecd2, #fcb69f);
+        }
+
+        .grid-item h2 {
+            color: #ff5722;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .grid-item p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .grid-item::before {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: #ff5722;
+            margin: 0 auto 15px auto;
+            border-radius: 2px;
+        }
+
+        footer {
+            background: #111;
+            color: #f4f4f9;
+            text-align: center;
+            padding: 20px;
+            font-size: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+            border-top: 5px solid rgba(255, 255, 255, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                font-size: 2.5em;
+                padding: 30px;
+            }
+
+            footer {
+                font-size: 0.9em;
+            }
+
+            .grid-container {
+                padding: 15px;
+            }
+
+            .grid-item {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>Dynamic Grid Design</header>
+    <div class="grid-container">
+        <div class="grid-item">
+            <h2>Creative Concept</h2>
+            <p>Explore the power of grid layouts to build clean and efficient designs for your projects.</p>
+        </div>
+        <div class="grid-item">
+            <h2>Responsive Layout</h2>
+            <p>Ensure flexibility in your designs with grids that adjust seamlessly across devices.</p>
+        </div>
+        <div class="grid-item">
+            <h2>Interactive Features</h2>
+            <p>Add hover effects and transitions to make your layout more engaging and dynamic.</p>
+        </div>
+        <div class="grid-item">
+            <h2>Modern Approach</h2>
+            <p>Utilize minimalist styles to create a professional yet visually appealing structure.</p>
+        </div>
+        <div class="grid-item">
+            <h2>Adaptable Content</h2>
+            <p>Organize text and visuals in a way that feels natural and intuitive to the user.</p>
+        </div>
+        <div class="grid-item">
+            <h2>Scalable Design</h2>
+            <p>Create layouts that can grow and adapt as your content or features expand.</p>
+        </div>
+    </div>
+    <footer>&copy; 2025 Dynamic Grid Design. All rights reserved.</footer>
+</body>
+</html>
